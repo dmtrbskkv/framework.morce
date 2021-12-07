@@ -1,0 +1,27 @@
+{
+    "name": "dmtrbskkv/morce-framework",
+    "description": "Morce Framework",
+    "keywords": ["framework", "morce"],
+    "type": "framework",
+    "autoload": {
+        "psr-4": {
+            "Morce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitry Baskakov",
+            "email": "baskakovdima99@mail.ru"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "twig/twig": "^3.0",
+        "doctrine/orm": "*",
+        "symfony/cache": "^5.4",
+        "doctrine/migrations": "^3.3"
+    }
+}
