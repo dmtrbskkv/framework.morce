@@ -2,6 +2,7 @@
     "name": "dmtrbskkv/morce-framework",
     "description": "Morce Framework",
     "keywords": ["framework", "morce"],
+    "license": "MIT",
     "type": "framework",
     "autoload": {
         "psr-4": {
