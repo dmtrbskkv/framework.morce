@@ -40,6 +40,12 @@ class ConfigLoader
      */
     const CONFIG_FILE_MIGRATION = 'migrations';
 
+
+    /**
+     * @var string App Directory
+     */
+    private static string $appDirectory = __DIR__;
+
     /**
      * Get data array from needed config file
      *
@@ -57,8 +63,25 @@ class ConfigLoader
         return [];
     }
 
+    /**
+     * @param string $configName
+     *
+     * @return string
+     */
     public static function getFilePath(string $configName): string
     {
-        return realpath(__DIR__ . '/../../config') . '/' . $configName . '.php';
+        return realpath(self::$appDirectory . '/config') . '/' . $configName . '.php';
+    }
+
+    /**
+     * Set App directory
+     *
+     * @param string $directory
+     *
+     * @return void
+     */
+    public static function setAppDirectory(string $directory)
+    {
+        self::$appDirectory = $directory;
     }
 }
